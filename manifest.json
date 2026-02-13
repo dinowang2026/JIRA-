@@ -1,0 +1,17 @@
+
+{
+  "name": "ProjectFlow Pro - JIRA 追蹤器",
+  "short_name": "ProjectFlow",
+  "description": "專業的 JIRA 任務管理與到期提醒工具",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/906/906334.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
