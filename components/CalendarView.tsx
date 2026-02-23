@@ -257,6 +257,12 @@ export const CalendarView: React.FC<CalendarViewProps> = ({ tasks, onUpdateTask 
                     </div>
                   </div>
                   <h4 className={`font-black text-slate-800 transition-colors leading-tight ${sizeStyles.title} ${isDone ? 'line-through text-slate-400' : 'group-hover:text-indigo-600'}`}>{task.summary}</h4>
+                  {task.statusUpdate && (
+                    <div className={`mt-2 p-3 bg-slate-50 rounded-xl border border-slate-100 text-slate-600 italic line-clamp-2 leading-relaxed ${cardSize === 'sm' ? 'text-[10px]' : cardSize === 'md' ? 'text-[11px]' : 'text-xs'}`}>
+                      <span className="font-black text-indigo-400 not-italic mr-1">最新進度：</span>
+                      {task.statusUpdate}
+                    </div>
+                  )}
                   <div className="flex items-center gap-6 text-xs text-slate-400 font-bold">
                     <div className="flex items-center gap-1.5"><Clock size={14} className="text-slate-300" /><span>{format(task.reviewDate, 'HH:mm')}</span></div>
                   </div>

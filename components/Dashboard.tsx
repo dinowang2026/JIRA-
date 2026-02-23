@@ -112,6 +112,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ tasks, stats, onViewTasks,
                       <div className={`w-2 h-2 mt-2 rounded-full ${isTaskOverdue(task.reviewDate) ? 'bg-rose-500' : 'bg-amber-500'}`}></div>
                       <div>
                         <div className="font-bold text-slate-800 line-clamp-1 group-hover:text-indigo-600 transition-colors">{task.summary}</div>
+                        {task.statusUpdate && (
+                          <div className="text-[11px] text-slate-500 mt-1 line-clamp-1 italic bg-slate-50 px-2 py-0.5 rounded border border-slate-100">
+                            <span className="font-black text-indigo-400 not-italic mr-1">進度：</span>
+                            {task.statusUpdate}
+                          </div>
+                        )}
                         <div className="text-xs text-slate-500 flex gap-2 mt-1 items-center">
                           <span className="font-mono bg-slate-100 px-1.5 rounded text-[10px]">{task.project}</span>
                           <span>•</span>

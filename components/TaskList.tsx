@@ -327,6 +327,13 @@ const TaskTodoCard: React.FC<{
           {task.summary}
         </h4>
 
+        {task.statusUpdate && (
+          <div className={`mt-1.5 p-2 bg-slate-50 rounded-lg border border-slate-100 text-slate-600 italic line-clamp-2 leading-relaxed ${size === 'sm' ? 'text-[10px]' : size === 'md' ? 'text-[11px]' : 'text-xs'}`}>
+            <span className="font-black text-indigo-400 not-italic mr-1">最新進度：</span>
+            {task.statusUpdate}
+          </div>
+        )}
+
         <div className={`flex items-center mt-1 text-slate-400 font-bold ${sizeStyles.meta}`}>
           <span className="flex items-center gap-1"><Clock size={sizeStyles.checkIcon-4} /> {task.lastUpdated.toLocaleDateString()}</span>
           {!isDone && task.reviewDate && (
